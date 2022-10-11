@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int main1() {
 	//Create images
 	std::ofstream image;
 
@@ -12,19 +12,20 @@ int main() {
 	if (image.is_open()) {
 		// Header 
 		image << "P3" << endl;
-		image << "3 2" << endl;
+		image << "100 100" << endl;
 		image << "255" << endl;
 
-		// Image Body
-		image << "255 0 0" << endl;
-		image << "0 255 0" << endl;
-		image << "0 0 255" << endl;
-		image << "255 255 0" << endl;
-		image << "255 255 255" << endl;
-		image << "0 0 0" << endl;
 
-		
+
+		for (int ImgH = 0; ImgH<100; ImgH++)
+		{
+			for (int ImgV = 0; ImgV<100; ImgV++)
+			{
+				image << "255 0 250" << endl;
+			}
+		}
 		
 	}
 	image.close();
+	return 0;
 }
